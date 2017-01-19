@@ -7,10 +7,6 @@ services:
   - selenium
 
 build:
-pre_ci:
-  - docker images | grep u14nod
-pre_ci_boot:
-  pull: false
 ci:
       - sudo npm install
       - export DISPLAY=:99.0
