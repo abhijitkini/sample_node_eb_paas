@@ -7,15 +7,16 @@ services:
   - selenium
 
 build:
-pre_ci_boot:
-  image_name: drydock/u14nodall
-  image_tag: prod
-  pull: false
-ci:
-      - sudo npm install
-      - export DISPLAY=:99.0
-      - xvfb-run --server-args="-ac" npm test
-      - echo "ci is running"
+  pre_ci_boot:
+    image_name: drydock/u14nodall
+    image_tag: prod
+    pull: false
+  
+  ci:
+    - sudo npm install
+    - export DISPLAY=:99.0
+    - xvfb-run --server-args="-ac" npm test
+    - echo "ci is running"
 
 # integrations:
 #   deploy:
