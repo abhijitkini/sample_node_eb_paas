@@ -8,6 +8,8 @@ services:
 
 build:
 pre_ci_boot:
+  image_name: drydock/u14nodall
+  image_tag: prod
   pull: false
 ci:
       - sudo npm install
