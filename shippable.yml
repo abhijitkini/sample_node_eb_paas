@@ -11,7 +11,7 @@ pre_ci:
   - docker images | grep u14nod
 pre_ci_boot:
   pull: false
-    ci:
+ci:
       - sudo npm install
       - export DISPLAY=:99.0
       - xvfb-run --server-args="-ac" npm test
